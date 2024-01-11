@@ -1,0 +1,11 @@
+{
+  "runtime": "nodejs18.x",
+  "version": "1.0",
+  "secrets": ["dev_hs_token"],
+  "endpoints": {
+    "fetchBlogPosts": {
+      "method": "GET",
+      "file": "fetchBlogPosts.js"
+    }
+  }
+}
