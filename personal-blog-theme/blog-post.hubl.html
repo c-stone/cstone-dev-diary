@@ -6,6 +6,5 @@
 
 {% extends "./layouts/base.hubl.html" %}
 {% block body %}
-  {% js_partial
-    path="@projects/personal-blog/js-package/components/partials/BlogPost.tsx" %}
+  {{ content.post_body }}
 {% endblock body %}
