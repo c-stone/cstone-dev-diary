@@ -1,0 +1,15 @@
+<!--
+  templateType: "blog_listing"
+  isAvailableForNewContent: true
+  label: Blog Listing
+  dataQueryPath: ./data-queries/personal_blog_posts
+-->
+
+{% set blogPosts = data_query.data.BLOG.post_collection.items %}
+
+{% extends "./layouts/base.hubl.html" %}
+{% block body %}
+  {% js_partial
+    path="@projects/personal-blog/js-package/components/partials/BlogListing.tsx",
+    posts={{ blogPosts }} %}
+{% endblock body %}

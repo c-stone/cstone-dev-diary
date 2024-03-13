@@ -1,0 +1,16 @@
+query PersonalBlogInfo {
+  BLOG {
+    post_collection(
+      filter: { content_group_id__eq: "160568063405", state__eq: "PUBLISHED" }
+    ) {
+      items {
+        name
+        post_body
+        slug
+        url
+        updated
+        author_name
+      }
+    }
+  }
+}
