@@ -19,7 +19,7 @@
     {% if !content.featured_image %}{#<meta property="og:image" content="https://www.yourdomain.com/hubfs/yourimage.jpg" />#}{% endif %}
 </head>
 <body class="{{ builtin_body_classes }} {% if (content.widgets.opaque_navigation.body.value || opaque_navigation || content.widgets.nav_options.body.opaque_navigation) %} header-white {% else %} not-opaque {% endif %} {{ 'blog-home ' if template_meta.label is string_containing 'blog-index' }} {% if request.full_url is string_containing '/author/' %} author-listing {% endif %} {{bodyClasses}}">
-
+    {{ require_css("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css") }}
     {% block header %}
     {% endblock header %}
 
