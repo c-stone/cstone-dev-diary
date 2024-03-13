@@ -5,10 +5,6 @@ import headshot from '../../assets/photos/chris-stone-headshot.png';
 
 import React from 'react';
 
-const gallery = Object.values(
-  import.meta.glob('../assets/photos/', { eager: true, as: 'url' }),
-);
-
 type Post = {
   name: string;
   post_body: string | null;
