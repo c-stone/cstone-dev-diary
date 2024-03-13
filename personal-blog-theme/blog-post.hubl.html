@@ -6,5 +6,9 @@
 
 {% extends "./layouts/base.hubl.html" %}
 {% block body %}
-  {{ content.post_body }}
+  {% js_partial
+    path="@projects/personal-blog/js-package/components/partials/BlogPost.tsx" %}
+
+  <!-- required tag for HS editor -->
+  <div style="display: none">{{ content.post_body }}</div>
 {% endblock body %}
