@@ -1,6 +1,6 @@
 {
-  "name": "project-name",
-  "description": "Project description",
+  "name": "personal-blog",
+  "description": "A blog built with HubSpot cms-react",
   "license": "Apache-2.0",
   "devDependencies": {
     "@hubspot/cli": "^4.0.1",
@@ -18,7 +18,7 @@
     "prettier": "prettier . --check",
     "watch:hubl": "hs watch theme-folder theme-folder",
     "upload:hubl": "hs upload theme-folder theme-folder",
-    "deploy": "hs project upload project-name"
+    "deploy": "hs project upload personal-blog"
   },
   "engines": {
     "node": ">=16.0.0"
