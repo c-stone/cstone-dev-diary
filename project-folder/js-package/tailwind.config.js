@@ -1,4 +1,6 @@
 import { fileURLToPath } from 'url';
+import typography from '@tailwindcss/typography';
+
 const componentsDir = fileURLToPath(new URL('./components', import.meta.url));
 
 export default {
@@ -10,5 +12,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [typography],
 };

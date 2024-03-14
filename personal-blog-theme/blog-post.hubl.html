@@ -6,6 +6,9 @@
 
 {% extends "./layouts/base.hubl.html" %}
 
+{{ require_css("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css") }}
+{{ require_css("https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css") }}
+
 {% block body %}
 
   {% js_partial
@@ -14,7 +17,7 @@
   <div class="bg-gray-950 text-white font-serif">
     <div class="mx-auto max-w-2xl bg-[--bg] px-5 py-12 text-[--text]">
       <header class="mb-14 flex flex-row place-content-between">
-        <a class="h-6 text-2xl font-semibold" href="/"> CStone's Dev Diary </a>
+        <a class="h-6 text-2xl font-semibold" href="/">CStone's Dev Diary</a>
         <span class="relative top-[4px] italic">
           by
           <a href="https://www.cstone.io/">

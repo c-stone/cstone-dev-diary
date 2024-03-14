@@ -6,10 +6,12 @@
 -->
 
 {% set blogPosts = data_query.data.BLOG.post_collection.items %}
+{% set hasMore = data_query.data.BLOG.post_collection.hasMore %}
 
 {% extends "./layouts/base.hubl.html" %}
 {% block body %}
   {% js_partial
     path="@projects/personal-blog/js-package/components/partials/BlogListing.tsx",
-    posts={{ blogPosts }} %}
+    posts={{ blogPosts }},
+    hasMore={{ hasMore }} %}
 {% endblock body %}
