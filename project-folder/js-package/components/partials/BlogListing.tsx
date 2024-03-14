@@ -19,6 +19,7 @@ type DataQueryResult = {};
 
 type Prop = {
   posts: Post[];
+  hasMore: boolean;
   dataQueryResult: DataQueryResult;
 };
 

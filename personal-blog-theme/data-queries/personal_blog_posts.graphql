@@ -1,7 +1,14 @@
-query PersonalBlogInfo {
+# label: "Personal Blog Posts"
+# description: "Returns published blog posts from personal blog"
+# $limit: 10
+# $offset: "{{request.query_dict.offset|multiply(10) || 0 }}"
+
+query PersonalBlogInfo($limit: Int!, $offset: Int!) {
   BLOG {
     post_collection(
       filter: { content_group_id__eq: "160568063405", state__eq: "PUBLISHED" }
+      limit: $limit
+      offset: $offset
     ) {
       items {
         name
@@ -12,6 +19,7 @@ query PersonalBlogInfo {
         updated
         author_name
       }
+      hasMore
     }
   }
 }
